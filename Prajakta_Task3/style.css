@@ -1,0 +1,36 @@
+body {
+    background-color: coral;
+}
+
+.head {
+    color: blue;
+}
+
+#bgline {
+    background-color: lightgreen;
+}
+
+h2 {
+    color: red;
+}
+
+p {
+    color: white;
+}
+
+#para {
+    color: green;
+}
+
+span {
+    background-color: yellow;
+    color: blue;
+}
+
+a {
+    color: blue;
+}
+
+h4 {
+    color: black;
+}
