@@ -1,0 +1,259 @@
+/* I used these values for the two screen sizes I tested */
+:root {
+    --tablet-size: 768px;
+    --mobile-size: 480px;
+}
+
+/* Starting with basic spacing reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= DESKTOP ================= */
+
+/* First I made the navbar in one row using flexbox */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.logo img {
+    width: 90px;
+}
+
+
+/* Navigation links stay in a row on desktop */
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #777;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #0099ff;
+}
+
+
+/* Username section */
+
+.username span {
+    background-color: #eaf4ff;
+    color: #4aa3ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+/* Hero is also a flex container on a large screen */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 100px);
+    padding: 40px 70px;
+    gap: 40px;
+}
+
+
+/* I started by giving both sides equal space */
+
+.left,
+.right {
+    width: 50%;
+}
+
+
+.left h1 {
+    font-size: 50px;
+    color: #374151;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left h1 span {
+    color: #0099ff;
+}
+
+.left p {
+    width: 80%;
+    color: #777;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.left button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.left button:hover {
+    background-color: #0077cc;
+}
+
+
+/* I used flexbox here to keep the image centered */
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    width: 500px;
+    max-width: 100%;
+}
+
+
+/* ================= TABLET ================= */
+
+/*
+   I tested the layout at around 768px.
+
+   The desktop text and spacing looked too large,
+   so I reduced sizes but kept the hero in a row.
+*/
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 15px;
+    }
+
+    .username span {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .hero {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .left h1 {
+        font-size: 38px;
+    }
+
+    .left p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .left button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .right img {
+        width: 280px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+/*
+   At smaller widths, the text and image became
+   too narrow when they were next to each other.
+
+   So I changed flex-direction from row to column.
+*/
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+
+    /* There is not enough space for all menu links */
+
+    .menu {
+        display: none;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .username span {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+
+    /* Stack text and image vertically */
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .left p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .left button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .right {
+        justify-content: center;
+    }
+
+    .right img {
+        width: 220px;
+    }
+}
+
