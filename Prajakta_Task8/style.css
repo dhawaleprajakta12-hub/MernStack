@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Navbar */
+  
+  .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  }
+  
+  .logo img {
+  width: 90px;
+  }
+  
+  .menu {
+  display: flex;
+  gap: 30px;
+  }
+  
+  .menu a {
+  text-decoration: none;
+  color: #777;
+  font-size: 18px;
+  }
+  
+  .menu a:hover {
+  color: #0099ff;
+  }
+  
+  .username span {
+  background-color: #eaf4ff;
+  color: #4aa3ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  }
+  
+  /* Hidden on desktop */
+  
+  .hamburger {
+  display: none;
+  }
+  
+  /* Hero */
+  
+  .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 90px);
+  padding: 40px 70px;
+  gap: 40px;
+  }
+  
+  .left,
+  .right {
+  width: 50%;
+  }
+  
+  .left h1 {
+  font-size: 50px;
+  color: #374151;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  }
+  
+  .left h1 span {
+  color: #0099ff;
+  }
+  
+  .left p {
+  width: 80%;
+  color: #777;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  }
+  
+  .service-btn {
+  background-color: #0099ff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  }
+  
+  .service-btn:hover {
+  transform: scale(1.05) rotate(-3deg);
+  }
+  
+  .right {
+  display: flex;
+  justify-content: center;
+  }
+  
+  .right img {
+  width: 500px;
+  max-width: 100%;
+  }
+  
+  /* Smaller screen */
+  
+  @media screen and (max-width: 768px) {
+  
+
+  .navbar {
+      padding: 15px 25px;
+  }
+  
+  .logo img {
+      width: 70px;
+  }
+  
+  .menu {
+      display: none;
+  }
+  
+  /*
+  The hamburger is relative because the mobile
+  menu will use absolute positioning from here.
+  */
+  
+  .hamburger {
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: 15px;
+  }
+  
+  .menu-btn {
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 5px 10px;
+  }
+  
+  /*
+  The menu and button are direct siblings.
+  
+  + means select the mobile-menu immediately
+  after the focused button.
+  */
+  
+  .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      width: 190px;
+      background-color: #222;
+      padding: 15px;
+      z-index: 10;
+  }
+  
+  /*
+  When the button gets focus, the menu appears.
+  The animation moves the menu from right to left.
+  */
+  
+  .menu-btn:focus + .mobile-menu {
+      display: block;
+      animation: slideMenu 0.4s ease forwards;
+  }
+  
+  .mobile-menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 5px;
+  }
+  
+  .mobile-menu a:hover {
+      color: #0099ff;
+  }
+  
+  /*
+  My animation experiment:
+  0% starts slightly to the right.
+  100% brings the menu to its normal position.
+  */
+  
+  @keyframes slideMenu {
+      from {
+          transform: translateX(100px);
+      }
+  
+      to {
+          transform: translateX(0);
+      }
+  }
+  
+  .hero {
+      padding: 30px;
+      gap: 20px;
+  }
+  
+  .left h1 {
+      font-size: 38px;
+  }
+  
+  .left p {
+      width: 100%;
+      font-size: 16px;
+  }
+  
+  .right img {
+      width: 300px;
+  }
+  
+  .username span {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+  
+  }
+  
+  /* Mobile */
+  
+  @media screen and (max-width: 480px) {
+  
+
+  .navbar {
+      padding: 15px;
+  }
+  
+  .logo img {
+      width: 60px;
+  }
+  
+  .hamburger {
+      margin-right: 5px;
+  }
+  
+  .username span {
+      font-size: 11px;
+      padding: 6px 9px;
+  }
+  
+  .hero {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      gap: 25px;
+  }
+  
+  .left,
+  .right {
+      width: 100%;
+  }
+  
+  .left h1 {
+      font-size: 32px;
+  }
+  
+  .left p {
+      font-size: 15px;
+  }
+  
+  .right {
+      justify-content: center;
+  }
+  
+  .right img {
+      width: 220px;
+  }
+}
+  
+
+  
