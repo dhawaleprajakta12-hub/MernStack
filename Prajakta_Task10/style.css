@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page font */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
+
+
+.logo img {
+    width: 90px;
+}
+
+
+/* Desktop navigation */
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: #777;
+    font-size: 18px;
+}
+
+
+.menu a:hover {
+    color: #0099ff;
+}
+
+
+/* Username */
+
+.username span {
+    background-color: #eaf4ff;
+    color: #4aa3ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Hero section */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 90px);
+    padding: 40px 70px;
+    gap: 40px;
+}
+
+
+/* Left and right sections */
+
+.left,
+.right {
+    width: 50%;
+}
+
+
+/* Hero heading */
+
+.left h1 {
+    font-size: 50px;
+    color: #374151;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+
+.left h1 span {
+    color: #0099ff;
+}
+
+
+/* Hero paragraph */
+
+.left p {
+    width: 80%;
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.left button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+/* Button gets bigger and rotates on hover */
+
+.left button:hover {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+
+/* Right side image */
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+
+.right img {
+    width: 500px;
+    max-width: 100%;
+
+    /*
+       Animation is applied to the hero image.
+
+       It runs for 5 seconds and repeats forever.
+    */
+
+    animation-name: laundryOrbit;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+/*
+   Hero Image Animation
+
+   I used translate values to move the image
+   around its starting position.
+
+   rotate creates the turning effect.
+
+   scaleX and scaleY are different at some
+   points to create a squeeze/stretch effect.
+*/
+
+@keyframes laundryOrbit {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+
+
+    25% {
+        transform: translate(25px, -20px) rotate(8deg) scale(1.05);
+    }
+
+
+    50% {
+        transform: translate(40px, 0) rotate(15deg) scaleX(1.1) scaleY(0.9);
+    }
+
+
+    75% {
+        transform: translate(15px, 20px) rotate(5deg) scaleX(0.9) scaleY(1.1);
+    }
+
+
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+
+/* Tablet screen */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+
+    .logo img {
+        width: 70px;
+    }
+
+
+    .menu {
+        gap: 15px;
+    }
+
+
+    .menu a {
+        font-size: 15px;
+    }
+
+
+    .username span {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+
+    .hero {
+        padding: 30px;
+        gap: 20px;
+    }
+
+
+    .left h1 {
+        font-size: 38px;
+    }
+
+
+    .left p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+    .left button {
+        font-size: 15px;
+        padding: 12px 24px;
+    }
+
+
+    .right img {
+        width: 280px;
+    }
+}
+
+
+/* Mobile screen */
+
+@media screen and (max-width: 480px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+
+    .menu {
+        display: none;
+    }
+
+
+    .logo img {
+        width: 60px;
+    }
+
+
+    .username span {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+
+    /*
+       On mobile, the text and image need more
+       horizontal space, so I changed the flex
+       direction from row to column.
+    */
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 20px;
+        gap: 25px;
+    }
+
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+
+    .left p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+
+    .left button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+
+    .right {
+        justify-content: center;
+    }
+
+
+    .right img {
+        width: 220px;
+    }
+}
+
