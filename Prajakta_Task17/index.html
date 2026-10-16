@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Divide Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>JavaScript - Promise based Divide</h2>
+        <p>Enter two numbers and check the division result.</p>
+
+        <div class="input-area">
+            <input type="number" id="firstNumber" placeholder="First number">
+            <input type="number" id="secondNumber" placeholder="Second number">
+            <button onclick="divideNumbers()">Divide</button>
+        </div>
+
+        <div id="result" class="result">Result will appear here.</div>
+
+        <h3>Test Cases</h3>
+        <div class="tests">
+            <button onclick="runTest(10, 2)">10 ÷ 2</button>
+            <button onclick="runTest(25, 5)">25 ÷ 5</button>
+            <button onclick="runTest(9, 3)">9 ÷ 3</button>
+            <button onclick="runTest(7, 0)">7 ÷ 0</button>
+            <button onclick="runTest(20, 4)">20 ÷ 4</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
