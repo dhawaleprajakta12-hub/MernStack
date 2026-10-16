@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshFold Laundry Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Fresh<span>Fold</span></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="username">User</div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="small-title">FAST • CLEAN • RELIABLE</p>
+        <h1>Revitalize Your<br><span>Clothes with Expert<br>Laundry Services!</span></h1>
+        <p>From premium dry cleaning to soft wash and fold, we deliver care and convenience. Choose a pickup, schedule a service, and rediscover the freshness of your clothes.</p>
+        <button class="primary-btn" id="bookServiceBtn">Book a Service Today</button>
+      </div>
+      <div class="hero-image">
+        <img src="assets/washing-machine.svg" alt="Laundry machine illustration">
+      </div>
+    </section>
+
+    <section class="achievements">
+      <h2>Our Achievements</h2>
+      <div class="achievement-item"><strong>15+</strong><span>Laundry Services</span></div>
+      <div class="achievement-item"><strong>240+</strong><span>Happy Customers</span></div>
+      <div class="achievement-item"><strong>2+</strong><span>Years Experience</span></div>
+    </section>
+
+    <section class="booking-section" id="services">
+      <div class="services-panel">
+        <h2>Our Services</h2>
+        <p class="section-note">Click the Add Item button to add the service to your cart.</p>
+        <div id="serviceList"></div>
+        <p class="cart-note">＋ Add the items to the cart and book now</p>
+      </div>
+
+      <div class="cart-panel" id="booking">
+        <div class="cart-box">
+          <div class="cart-heading">
+            <h2>Added Items</h2>
+            <span id="cartCount">0</span>
+          </div>
+          <div class="cart-table-head"><span>Service</span><span>Price</span><span></span></div>
+          <div id="cartItems" class="cart-items">
+            <p class="empty-cart">No items added</p>
+          </div>
+          <div class="total-row"><span>Total Amount</span><strong id="totalAmount">₹0</strong></div>
+        </div>
+
+        <div class="form-box">
+          <h2>Book Now</h2>
+          <form id="bookingForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required placeholder="Enter your name">
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" required placeholder="Enter your email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required placeholder="Enter phone number" pattern="[0-9]{10}">
+
+            <button type="submit" class="book-btn">Book Now</button>
+          </form>
+          <p id="bookingMessage" class="booking-message"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quality" id="about">
+      <div class="quality-card"><div class="quality-icon">✦</div><h3>Premium Services</h3><p>Careful cleaning using quality products for every fabric.</p></div>
+      <div class="quality-card"><div class="quality-icon">✓</div><h3>Quick Support</h3><p>Friendly assistance whenever you need an update.</p></div>
+      <div class="quality-card"><div class="quality-icon">▣</div><h3>Hassle Free Delivery</h3><p>Easy pickup and delivery that saves your time.</p></div>
+      <div class="quality-card"><div class="quality-icon">₹</div><h3>Affordable Prices</h3><p>Simple pricing with no confusing extra charges.</p></div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div><h2>Subscribe to our<br>newsletter.</h2></div>
+      <form id="newsletterForm" class="newsletter-form">
+        <input type="text" id="subscriberName" placeholder="Full name" required>
+        <input type="email" id="subscriberEmail" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><div class="footer-logo">FreshFold</div><p>Clean clothes. Less stress.</p></div>
+    <div><h3>About Us</h3><a href="#about">Our Story</a><a href="#services">Our Services</a></div>
+    <div><h3>Important Links</h3><a href="#home">FAQs</a><a href="#services">Terms of Service</a></div>
+    <div><h3>Contact</h3><p>hello@freshfold.com</p><p>+91 98765 43210</p></div>
+    <div><h3>Follow Us</h3><div class="socials"><a href="#">f</a><a href="#">◎</a><a href="#">in</a></div></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
